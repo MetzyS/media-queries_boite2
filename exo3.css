@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+.box1,
+.box2,
+.box3,
+.box4,
+.box5,
+.box6 {
+  min-width: 50px;
+  min-height: 50px;
+  background-color: #cfe2f3;
+  box-sizing: border-box;
+  border: 1px solid black;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    justify-content: flex-start;
+  }
+  .box2,
+  .box4,
+  .box6 {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    justify-content: flex-start;
+  }
+  .box1,
+  .box3,
+  .box5 {
+    visibility: hidden;
+  }
+}
